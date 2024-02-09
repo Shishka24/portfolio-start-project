@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { themeStyle } from "../../styles/Theme";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (
@@ -7,7 +8,7 @@ export const Menu = (props: { menuItems: Array<string> }) => {
         {props.menuItems.map((item, index) => {
           return (
             <li key={index}>
-              <a href="">{item}</a>
+              <a href="#">{item}</a>
             </li>
           );
         })}
@@ -20,7 +21,8 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     gap: 60px;
-    list-style: none;
-    justify-content: center;
+    a {
+      color: ${themeStyle.colors.secondFontColor};
+    }
   }
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
+import { Container } from "../../../../components/Container";
 
 type SkillPropsType = {
   iconId: string;
@@ -11,21 +12,27 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
-      <Icon
-        iconId={props.iconId}
-        veiwBox={props.viewBox}
-        width="100"
-        height="100"
-      />
-      <SkillTitle>{props.title}</SkillTitle>
-      <SkillText>{props.description}</SkillText>
+      <Container>
+        <Icon
+          iconId={props.iconId}
+          veiwBox={props.viewBox}
+          width="100"
+          height="100"
+        />
+        <SkillTitle>{props.title}</SkillTitle>
+        <SkillText>{props.description}</SkillText>
+      </Container>
     </StyledSkill>
   );
 };
 
 const StyledSkill = styled.div`
   width: 33%;
-  background-color: #9e9d9d92;
+  padding-top: 15px;
 `;
-const SkillTitle = styled.h3``;
-const SkillText = styled.p``;
+const SkillTitle = styled.h3`
+  font-size: 16px;
+`;
+const SkillText = styled.p`
+  font-size: 14px;
+`;

@@ -13,5 +13,4 @@ export const Slogan = () => {
 
 const StyledSlogan = styled.section`
   min-height: 30vh;
-  background-color: #22769c;
 `;

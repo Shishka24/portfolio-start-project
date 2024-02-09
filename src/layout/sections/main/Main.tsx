@@ -1,33 +1,84 @@
 import styled from "styled-components";
 import profilePic from "../../../assets/images/haha.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Container } from "../../../components/Container";
+import { themeStyle } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexWrapper align={"center"} justify={"space-around"}>
-        <div>
-          <span>Hi There</span>
-          <h2>My Name is Vladislav Sischin</h2>
-          <MainTitle>I'm Web Developer</MainTitle>
-        </div>
-        <ProfilePic src={profilePic} alt="Me" />
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper align={"center"} justify={"space-around"}>
+          <div>
+            <StyledSpan>Hi There</StyledSpan>
+            <StyledIntroTitle>
+              My Name is <span>Vladislav Sischin</span>
+            </StyledIntroTitle>
+            <StyledTitle>
+              I've been doing web design, front-end and back-end development for
+              a year now. Do you need a website design, site layout, or maybe a
+              turnkey website? Then contact me
+            </StyledTitle>
+          </div>
+          <ImgWrapper>
+            <ProfilePic src={profilePic} alt="Me" />
+          </ImgWrapper>
+        </FlexWrapper>
+      </Container>
     </StyledMain>
   );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
   min-height: 100vh;
-  background-color: #0c0b0b9e;
+  display: flex;
+  box-sizing: border-box;
+`;
+
+const StyledSpan = styled.span`
+  font-family: NEXT ART;
+  font-size: 38px;
+  font-weight: 400;
+`;
+
+const StyledIntroTitle = styled.h2`
+  font-family: NEXT ART;
+  font-size: 52px;
+  font-weight: 500;
+  span {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 12px;
+      background-color: ${themeStyle.colors.secondFontColor};
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+`;
+
+const StyledTitle = styled.span`
+  font-size: 18px;
+  font-weight: 100;
 `;
 
 const ProfilePic = styled.img`
-  margin-top: 25px;
   width: 350px;
   height: 430px;
   object-fit: cover;
   border-radius: 3cap;
 `;
-
-const MainTitle = styled.h1``;
+const ImgWrapper = styled.div`
+  margin-top: 120px;
+  position: relative;
+  &:: {
+    content: "";
+    width: 632px;
+    height: 674.47px;
+    position: absolute;
+  }
+`;

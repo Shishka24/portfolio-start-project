@@ -22,6 +22,4 @@ export const Works = () => {
   );
 };
 
-const StyledWorks = styled.section`
-  background-color: #858554;
-`;
+const StyledWorks = styled.section``;

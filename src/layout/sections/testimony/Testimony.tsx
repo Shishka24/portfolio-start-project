@@ -6,17 +6,16 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 
 export const Testimony = () => {
   return (
-    <StyledTestimony>
-      <TitleSection>Testimony</TitleSection>
-      <FlexWrapper direction={"column"} align={"center"}>
+    <FlexWrapper direction={"column"} align={"center"}>
+      <StyledTestimony>
+        <TitleSection>Testimony</TitleSection>
         <Icon iconId={"testimony"} />
         <Slider />
-      </FlexWrapper>
-    </StyledTestimony>
+      </StyledTestimony>
+    </FlexWrapper>
   );
 };
 
 const StyledTestimony = styled.section`
-  min-height: 50%;
-  background-color: #8bee8b;
+  min-width: 100vh;
 `;

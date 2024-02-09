@@ -22,7 +22,6 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-  background-color: #d88d8d;
   min-height: 50vh;
 `;
 const SectionTitle = styled.h3``;

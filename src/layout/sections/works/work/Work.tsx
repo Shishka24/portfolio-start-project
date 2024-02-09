@@ -21,7 +21,6 @@ export const Work = (props: WorkPropsType) => {
 const StyledWork = styled.div`
   max-width: 540px;
   width: 100%;
-  background-color: pink;
   justify-content: space-between;
   align-items: center;
 `;
