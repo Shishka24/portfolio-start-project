@@ -1,38 +1,58 @@
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
 import { Container } from "../../../../components/Container";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { themeStyle } from "../../../../styles/Theme";
 
 type SkillPropsType = {
   iconId: string;
   title: string;
   description: string;
-  viewBox: string;
+  viewBox?: string;
 };
 
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
-      <Container>
-        <Icon
-          iconId={props.iconId}
-          veiwBox={props.viewBox}
-          width="100"
-          height="100"
-        />
+      <FlexWrapper direction={"column"} align={"center"}>
+        <IconWrapper>
+          <Icon iconId={props.iconId} veiwBox={props.viewBox} />
+        </IconWrapper>
         <SkillTitle>{props.title}</SkillTitle>
         <SkillText>{props.description}</SkillText>
-      </Container>
+      </FlexWrapper>
     </StyledSkill>
   );
 };
 
 const StyledSkill = styled.div`
-  width: 33%;
-  padding-top: 15px;
+  width: 380px;
+  padding: 62px 20px 40px;
+  box-shadow: 0px 4px 6px 0px #00000078;
 `;
 const SkillTitle = styled.h3`
-  font-size: 16px;
+  margin: 70px 0 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
 `;
 const SkillText = styled.p`
-  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+`;
+export const IconWrapper = styled.div`
+  position: relative;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    box-shadow: 0px 4px 6px 2px #921919;
+    border-radius: 15px;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    transform-origin: top left;
+    position: absolute;
+  }
 `;

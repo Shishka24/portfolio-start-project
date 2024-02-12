@@ -21,7 +21,7 @@ export const Slider = () => {
       </FlexWrapper>
       <Pagination>
         <span>.</span>
-        <span>.</span>
+        <span className={"active"}>.</span>
         <span>.</span>
       </Pagination>
     </StyledSlider>
@@ -29,25 +29,38 @@ export const Slider = () => {
 };
 
 const StyledSlider = styled.div`
-  border: 1px solid red;
   max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 const Slide = styled.div`
-  text-align: center;
+  /* text-align: center; */
 `;
-const StyledText = styled.p``;
-const StyledTitle = styled.span``;
+const StyledText = styled.p`
+  margin: 42px 0 42px;
+`;
+const StyledTitle = styled.span`
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 22px 0 42px;
+  display: inline-block;
+`;
 const Pagination = styled.div`
   span {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin: 5px;
-    margin-top: 25px;
     border-radius: 3cap;
-    background-color: #3d0423;
+    background-color: #39775a;
+    cursor: pointer;
+    & + span {
+      margin-left: 5px;
+    }
+    &.active {
+      background-color: #17df82;
+    }
   }
 `;

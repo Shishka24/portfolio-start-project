@@ -4,6 +4,7 @@ import { Footer } from "./layout/footer/Footer";
 import { Contacts } from "./layout/sections/contacts/Contacts";
 import { Main } from "./layout/sections/main/Main";
 import { Skills } from "./layout/sections/skills/Skills";
+import SlideShow from "./layout/sections/slideShow/SlideShow";
 import { Slogan } from "./layout/sections/slogan/Slogan";
 import { Testimony } from "./layout/sections/testimony/Testimony";
 import { Works } from "./layout/sections/works/Works";
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <Main />
+      {/* <SlideShow /> */}
       <Skills />
       <Works />
       <Testimony />

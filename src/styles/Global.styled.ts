@@ -21,29 +21,43 @@ body {
   color:${themeStyle.colors.secondFontColor};
   line-height:1.2;
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
+section{
+  padding:100px 0 ;
+}
 a{
     text-decoration:none ;
+    color:${themeStyle.colors.fontColor}
 }
-
 ul{
     list-style:none;
 }
-
 button{
     background-color:unset;
     border:none;
+    cursor: pointer;
+    /* color:${themeStyle.colors.fontColor} ; */
 }
-
 section:nth-of-type(odd){
-  background-color:${themeStyle.colors.primaryBG} ;
+  background: ${themeStyle.colors.backgroundOdd};
 }
 section:nth-of-type(even){
-  background-color:${themeStyle.colors.secondaryBG} ;
+ background: ${themeStyle.colors.backgroundEven};
 }
+h3{
+  font-size: 20px;
+  font-weight:600 ;
+  letter-spacing: 1px;
+}
+p{
+  font-size: 16px;
+  font-weight:400px ;
+  line-height:1.4 ;
+}
+/* button{
+  position: fixed;
+  bottom: 20px;
+  /* right: 20px; */
+  /* width:100px ;
+  border:15px solid red ;
+}  */
 `;

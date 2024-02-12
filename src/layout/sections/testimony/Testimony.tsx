@@ -3,19 +3,21 @@ import { TitleSection } from "../../../components/SectionTitle";
 import { Icon } from "../../../components/icon/Icon";
 import { Slider } from "../../../components/slider/Slider";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Container } from "../../../components/Container";
 
 export const Testimony = () => {
   return (
-    <FlexWrapper direction={"column"} align={"center"}>
-      <StyledTestimony>
-        <TitleSection>Testimony</TitleSection>
-        <Icon iconId={"testimony"} />
-        <Slider />
-      </StyledTestimony>
-    </FlexWrapper>
+    <StyledTestimony>
+      <Container>
+        <FlexWrapper direction={"column"} align={"center"}>
+          <TitleSection>Testimony</TitleSection>
+          <Slider />
+        </FlexWrapper>
+      </Container>
+    </StyledTestimony>
   );
 };
 
 const StyledTestimony = styled.section`
-  min-width: 100vh;
+  min-height: 50vh;
 `;
