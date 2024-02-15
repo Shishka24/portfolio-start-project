@@ -38,10 +38,10 @@ button{
     /* color:${themeStyle.colors.fontColor} ; */
 }
 section:nth-of-type(odd){
-  background: ${themeStyle.colors.backgroundOdd};
+  background-image: ${themeStyle.colors.backgroundOdd};
 }
 section:nth-of-type(even){
- background: ${themeStyle.colors.backgroundEven};
+ background-image: ${themeStyle.colors.backgroundEven};
 }
 h3{
   font-size: 20px;

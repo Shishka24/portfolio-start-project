@@ -22,9 +22,6 @@ export const Main = () => {
               turnkey website? <Button>Then contact me</Button>
             </StyledTitle>
           </div>
-          {/* <IconWrapper>
-            <Icon iconId={"eclipse"} veiwBox={"0 0 879 880"} />
-          </IconWrapper> */}
           <ImgWrapper>
             <ProfilePic src={profilePic} alt="Me" />
           </ImgWrapper>
@@ -35,7 +32,8 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 100vh;
+  align-items: center;
+  /* min-height: 100vh; */
   display: flex;
   box-sizing: border-box;
 `;
@@ -71,25 +69,32 @@ const StyledTitle = styled.span`
   font-weight: 100;
 `;
 
+const ImgWrapper = styled.div`
+  margin-top: 30px;
+  width: 600px;
+  height: 400px;
+  border: 20px solid #4eadbe; /* Set the border color and width */
+  border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+  overflow: inherit;
+`;
 const ProfilePic = styled.img`
-  width: 350px;
+  width: 330px;
   height: 430px;
   object-fit: cover;
   border-radius: 3cap;
   position: relative;
+  display: block;
 `;
 
 const IconWrapper = styled.svg``;
 
-const ImgWrapper = styled.div`
-  margin-top: 120px;
-  position: relative;
-  &::before {
-    content: "";
-    width: 632px;
-    height: 674.47px;
-    position: absolute;
-    background: url(${require("../../../assets/images/Ellipse 6.svg")})
-      center/cover no-repeat;
-  }
-`;
+/* margin-top: 120px;
+position: relative;
+&::before {
+  content: "";
+  width: 632px;
+  height: 674.47px;
+  position: absolute;
+  background: url(${require("../../../assets/images/Ellipse 6.svg")})
+  center/cover no-repeat;
+} */

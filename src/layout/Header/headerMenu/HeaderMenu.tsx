@@ -31,6 +31,9 @@ const StyledNav = styled.nav`
     gap: 30px;
     justify-content: center;
   }
+  @media ${themeStyle.media.tablet} {
+    display: none;
+  }
 `;
 
 const LinkStyled = styled.a`

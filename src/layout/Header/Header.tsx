@@ -4,6 +4,7 @@ import { themeStyle } from "../../styles/Theme";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 const items = ["Home", "Projects", "About Me", "Contact"];
 
@@ -15,6 +16,7 @@ export const Header = () => {
           <Logo />
           <h1>PineCone</h1>
           <HeaderMenu menuItems={items} />
+          <MobileMenu menuItems={items} />
         </FlexWrapper>
       </Container>
     </StyledHeader>
