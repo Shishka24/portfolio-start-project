@@ -1,13 +1,24 @@
 import styled, { css } from "styled-components";
 import { themeStyle } from "../../../styles/Theme";
+import { useState } from "react";
+import { on } from "events";
 
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
+  const [burgerOpen, setBurgerOpen] = useState(false);
+  const onBurgerClick = () => {
+    setBurgerOpen(!burgerOpen);
+  };
   return (
     <StyledMobileNav>
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={burgerOpen} onClick={onBurgerClick}>
         <span></span>
       </BurgerButton>
-      <PopUpMenu isOpen={false}>
+      <PopUpMenu
+        isOpen={burgerOpen}
+        onClick={() => {
+          setBurgerOpen(false);
+        }}
+      >
         <ul>
           {props.menuItems.map((item, index) => {
             return (

@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { themeStyle } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const Link = styled.a`
-  font-weight: 400;
-  font-size: 16px;
+  ${font({
+    weight: 400,
+    Fmax: 14,
+    Fmin: 12,
+    color: "E4E4E4",
+  })}
   color: ${themeStyle.colors.secondFontColor};
   letter-spacing: 1px;
   text-transform: uppercase;

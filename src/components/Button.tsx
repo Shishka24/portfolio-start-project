@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import { font } from "../styles/Common";
 
 export const Button = styled.button`
-  /* font-family: NEXT ART; */
-  font-size: 24px;
-  font-weight: 700px;
+  ${font({
+    family: "'NEXT ART'",
+    weight: 700,
+    Fmax: 24,
+    Fmin: 10,
+    color: "#1cc0e9df",
+  })}
   letter-spacing: 1px;
   height: 47px;
   text-transform: uppercase;

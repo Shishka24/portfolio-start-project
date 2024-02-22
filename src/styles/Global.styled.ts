@@ -20,9 +20,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color:${themeStyle.colors.secondFontColor};
   line-height:1.2;
+  min-width: 360px;
 }
 section{
   padding:100px 0 ;
+  @media ${themeStyle.media.mobile}{
+    padding: 80px 0;
+  }
 }
 a{
     text-decoration:none ;
@@ -32,10 +36,10 @@ ul{
     list-style:none;
 }
 button{
-    background-color:unset;
+     background-color:unset; 
     border:none;
     cursor: pointer;
-    /* color:${themeStyle.colors.fontColor} ; */
+    color:${themeStyle.colors.fontColor} ;
 }
 section:nth-of-type(odd){
   background-image: ${themeStyle.colors.backgroundOdd};
@@ -53,11 +57,5 @@ p{
   font-weight:400px ;
   line-height:1.4 ;
 }
-/* button{
-  position: fixed;
-  bottom: 20px;
-  /* right: 20px; */
-  /* width:100px ;
-  border:15px solid red ;
-}  */
+
 `;

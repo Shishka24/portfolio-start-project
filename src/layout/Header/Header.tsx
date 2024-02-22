@@ -24,7 +24,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: ${themeStyle.colors.primaryBG};
+  background-color: linear-gradient(110deg, #324040 60%, #0c5252 60%);
   padding: 20px 0;
   position: fixed;
   top: 0;

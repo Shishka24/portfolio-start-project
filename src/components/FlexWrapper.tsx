@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-type FlexWrapperPropsType = {
+export type FlexWrapperPropsType = {
   direction?: string;
   justify?: string;
   align?: string;
