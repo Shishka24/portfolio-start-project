@@ -19,7 +19,9 @@ export const Work = (props: WorkPropsType) => {
       <Description>
         <Title>{props.title}</Title>
         <Text>{props.text}</Text>
-        <Link href={"#"}>Demo</Link>
+        <Link active href={"#"}>
+          Demo
+        </Link>
         <Link href={"#"}>Code</Link>
       </Description>
     </StyledWork>

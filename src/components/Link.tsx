@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { themeStyle } from "../styles/Theme";
 import { font } from "../styles/Common";
 
-export const Link = styled.a`
+export const Link = styled.a<{ active?: boolean }>`
   ${font({
     weight: 400,
     Fmax: 14,
@@ -29,5 +29,10 @@ export const Link = styled.a`
     right: -10px;
     background-color: ${themeStyle.colors.fontColor};
     z-index: -1;
+    ${(props) =>
+      props.active &&
+      css<{ active?: boolean }>`
+        height: 5px;
+      `}
   }
 `;
