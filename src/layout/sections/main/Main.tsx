@@ -8,6 +8,8 @@ import { Container } from "../../../components/Container";
 import { themeStyle } from "../../../styles/Theme";
 import { Button } from "../../../components/Button";
 import { font } from "../../../styles/Common";
+import Typewriter from "typewriter-effect";
+import Tilt from "react-parallax-tilt";
 
 export const Main = () => {
   return (
@@ -19,10 +21,18 @@ export const Main = () => {
             <StyledIntroTitle>
               My Name is <span>Vladislav Sischin</span>
             </StyledIntroTitle>
+            <Typewriter
+              options={{
+                strings: [
+                  "I've been doing web design, front-end for a 2 years now. Do you need a website design, site layout, or maybe a turnkey website?",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 100,
+              }}
+            />
             <StyledTitle>
-              I've been doing web design, front-end and back-end development for
-              a year now. Do you need a website design, site layout, or maybe a
-              turnkey website? <Button>Then contact me</Button>
+              <Button>Then contact me</Button>
             </StyledTitle>
           </div>
           <ImgWrapper>
