@@ -1,9 +1,17 @@
 import styled, { css } from "styled-components";
 import { themeStyle } from "../../../styles/Theme";
 import { useState } from "react";
-import { on } from "events";
+import { Link } from "react-scroll";
+// import { on } from "events";
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
+type HeaderMenuPropsType = {
+  menuItems: Array<{
+    title: string;
+    href: string;
+  }>;
+};
+
+export const MobileMenu = (props: HeaderMenuPropsType) => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const onBurgerClick = () => {
     setBurgerOpen(!burgerOpen);
@@ -23,15 +31,22 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
           {props.menuItems.map((item, index) => {
             return (
               <ListStyled key={index}>
-                <LinkStyled href="">
-                  {item}
+                <NavLinkStyled
+                  smooth={true}
+                  to={item.href}
+                  activeClass="active"
+                  spy={true}
+                  offset={50}
+                  to={item.href}
+                >
+                  {item.title}
                   <Mask>
-                    <span>{item}</span>
+                    <span>{item.title}</span>
                   </Mask>
                   <Mask>
-                    <span>{item}</span>
+                    <span>{item.title}</span>
                   </Mask>
-                </LinkStyled>
+                </NavLinkStyled>
               </ListStyled>
             );
           })}
@@ -124,15 +139,6 @@ const PopUpMenu = styled.div<{ isOpen: boolean }>`
     align-items: center;
   }
 `;
-const LinkStyled = styled.a`
-  font-family: Arodora Pro;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  text-align: center;
-  color: transparent;
-`;
-
 const Mask = styled.span`
   position: absolute;
   top: 0;
@@ -152,6 +158,14 @@ const Mask = styled.span`
 
 const ListStyled = styled.li`
   position: relative;
+`;
+const NavLinkStyled = styled(Link)`
+  font-family: Arodora Pro;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: transparent;
   &::before {
     content: "";
     display: inline-block;
@@ -164,7 +178,8 @@ const ListStyled = styled.li`
     z-index: 1;
     transform: scale(0);
   }
-  &:hover {
+  &:hover,
+  &.active {
     &::before {
       transform: scale(1);
     }

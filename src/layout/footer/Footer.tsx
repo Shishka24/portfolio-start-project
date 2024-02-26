@@ -52,6 +52,7 @@ const StyledFooter = styled.footer`
   background-color: ${themeStyle.colors.backgroundOdd};
   background-color: black;
   padding: 40px 0;
+  position: relative;
 `;
 const Name = styled.span`
   ${font({ weight: 700, Fmax: 22, Fmin: 16, lineHeight: 2 })}

@@ -6,8 +6,29 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
-const items = ["Home", "Projects", "About Me", "Contact"];
-
+// const items = ["Home", "Projects", "About Me", "Contact"];
+const items = [
+  {
+    title: "Home",
+    href: "home",
+  },
+  {
+    title: "Skills",
+    href: "skills",
+  },
+  {
+    title: "Projects",
+    href: "projects",
+  },
+  {
+    title: "Testimony",
+    href: "testimony",
+  },
+  {
+    title: "Contact",
+    href: "contacts",
+  },
+];
 export const Header = () => {
   return (
     <StyledHeader>

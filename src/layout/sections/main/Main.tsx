@@ -9,11 +9,11 @@ import { themeStyle } from "../../../styles/Theme";
 import { Button } from "../../../components/Button";
 import { font } from "../../../styles/Common";
 import Typewriter from "typewriter-effect";
-import Tilt from "react-parallax-tilt";
+// import Tilt from "react-parallax-tilt";
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id={"home"}>
       <Container>
         <FlexMainWrapper align={"center"} justify={"space-between"}>
           <div>
@@ -24,20 +24,20 @@ export const Main = () => {
             <Typewriter
               options={{
                 strings: [
-                  "I've been doing web design, front-end for a 2 years now. Do you need a website design, site layout, or maybe a turnkey website?",
+                  "I've been doing web design, front-end for a 2 years now.",
                 ],
                 autoStart: true,
                 loop: true,
                 delay: 100,
               }}
             />
-            <StyledTitle>
-              <Button>Then contact me</Button>
-            </StyledTitle>
+            <StyledTitle></StyledTitle>
           </div>
+          {/* <Tilt> */}
           <ImgWrapper>
             <ProfilePic src={profilePic} alt="Me" />
           </ImgWrapper>
+          {/* </Tilt> */}
         </FlexMainWrapper>
       </Container>
     </StyledMain>

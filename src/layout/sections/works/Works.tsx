@@ -65,7 +65,7 @@ export const Works = () => {
   }
 
   return (
-    <StyledWorks>
+    <StyledWorks id={"projects"}>
       <Container>
         <TitleSection>Projects</TitleSection>
         <TabMenu
@@ -91,4 +91,5 @@ const StyledWorks = styled.section`
   ${FlexWrapper} {
     gap: 10px;
   }
+  position: relative;
 `;

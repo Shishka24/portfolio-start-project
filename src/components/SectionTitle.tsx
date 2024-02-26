@@ -8,10 +8,8 @@ export const TitleSection = styled.h2`
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 5px;
-
-  text-align: center;
   //в принципе это не важно так как это просто черточка под заголовком
-  &::before {
+  /* &::before {
     content: "";
     display: inline-block;
     width: 55px;
@@ -22,5 +20,5 @@ export const TitleSection = styled.h2`
     bottom: 30px;
     transform: translateX(-50%);
     margin-bottom: 90px;
-  }
+  } */
 `;

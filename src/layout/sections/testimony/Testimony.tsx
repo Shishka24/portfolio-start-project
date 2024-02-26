@@ -7,7 +7,7 @@ import { Container } from "../../../components/Container";
 
 export const Testimony = () => {
   return (
-    <StyledTestimony>
+    <StyledTestimony id={"testimony"}>
       <Container>
         <FlexWrapper direction={"column"} align={"center"}>
           <TitleSection>Testimony</TitleSection>
@@ -20,4 +20,5 @@ export const Testimony = () => {
 
 const StyledTestimony = styled.section`
   min-height: 50vh;
+  position: relative;
 `;

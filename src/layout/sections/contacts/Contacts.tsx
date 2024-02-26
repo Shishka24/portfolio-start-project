@@ -6,7 +6,7 @@ import { Container } from "../../../components/Container";
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id={"contacts"}>
       <Container>
         <TitleSection>
           <StyledForm>
@@ -25,7 +25,9 @@ export const Contacts = () => {
   );
 };
 
-const StyledContacts = styled.section``;
+const StyledContacts = styled.section`
+  position: relative;
+`;
 const StyledForm = styled.form`
   max-width: 540px;
   width: 100%;
